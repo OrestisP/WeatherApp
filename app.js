@@ -16,7 +16,8 @@ app.get("/", function(req,res){
 app.post("/", function(req,res){
   //console.log(req.body.city);//city is the html input name
   const query = req.body.city;
-  const apiKey = "8dfa7b166e10f92812fb3951d8d32291";
+  var key = config.WEATHER_API_KEY;
+  const apiKey = key;
   const unit = "metric"
   const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apiKey+"&units="+unit;
   https.get(url, function(response){//this only gets data from external server.
