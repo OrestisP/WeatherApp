@@ -2,8 +2,7 @@
 const express = require("express"); // npm install express --save
 const https = require('https'); //this is native pkg, no install needed
 const bodyParser = require('body-parser');//npm install body-parser
-
-
+const {config} = require('./config.js'); // import variable form config.js file
 ///// CREATE APP //////////////////////////////////////////////////////
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
